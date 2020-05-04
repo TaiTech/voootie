@@ -24,10 +24,12 @@ const useStyle = makeStyles((theme) => ({
   copy: {
     fontWeight: "bold",
     color: "#ffffff",
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(5),
   },
   images: {
     textAlign: "center",
-    padding: "40px 0",
+    paddingBottom: theme.spacing(8),
   },
   arrow: {
     padding: "0 100px",
