@@ -42,7 +42,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-function Top() {
+const Top = () => {
   const classes = useStyle();
   return (
     <div className={classes.root}>
@@ -74,14 +74,14 @@ function Top() {
       <Grid container spacing={1} className={classes.descriptionContainer}>
         <Grid item xs={1} />
         <Grid item xs={4}>
-          <Paper className={classes.descriptionPaper}>
+          <Paper elevation={0} className={classes.descriptionPaper}>
             <Typography variant="h5">Voootieとは</Typography>
             <Divider variant="middle" />
             <Typography variant="body1">
               Voootieは団体と国民を結ぶ国内最大級の投票型プラットフォームです。
             </Typography>
           </Paper>
-          <Paper className={classes.descriptionPaper}>
+          <Paper elevation={0} className={classes.descriptionPaper}>
             <Typography variant="h5">Voootieの理念</Typography>
             <Divider variant="middle" />
             <Typography variant="body1">
@@ -90,7 +90,7 @@ function Top() {
           </Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.descriptionPaper}>
+          <Paper elevation={0} className={classes.descriptionPaper}>
             <Typography variant="h5">Voootieでできること</Typography>
             <Divider variant="middle" />
             <Typography variant="body1">
@@ -106,6 +106,6 @@ function Top() {
       <CommonFotter />
     </div>
   );
-}
+};
 
 export default Top;
