@@ -39,7 +39,7 @@ const Home = () => {
             興味のある質問に投票しよう！
           </Typography>
           <Typography variant="body2" className={classes.subtitle}>
-            質問結果は団体や他のユーザーに影響を与えます。慎重に答えましょう。
+            投票は団体や他のユーザーに影響を与えます。慎重に答えましょう。
           </Typography>
         </Grid>
       </Grid>
