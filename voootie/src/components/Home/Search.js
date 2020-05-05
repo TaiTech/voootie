@@ -9,7 +9,9 @@ import Select from "@material-ui/core/Select";
 import TextField from "@material-ui/core/TextField";
 
 const useStyle = makeStyles((theme) => ({
-  root: {},
+  root: {
+    paddingBottom: theme.spacing(5),
+  },
   titleBox: {
     backgroundColor: "#2e2e2e",
     color: "#ffffff",
@@ -31,6 +33,9 @@ const useStyle = makeStyles((theme) => ({
   keywordForm: {
     paddingLeft: theme.spacing(1),
     width: "90%",
+  },
+  spacing: {
+    paddingTop: theme.spacing(2),
   },
 }));
 
@@ -57,6 +62,7 @@ const Search = () => {
           検索条件
         </Typography>
       </Box>
+      <div className={classes.spacing} />
       <Box className={classes.searchBox}>
         <Typography variant="subtitle1" className={classes.searchTitle}>
           エリア

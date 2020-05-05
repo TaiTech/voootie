@@ -13,6 +13,7 @@ import Divider from "@material-ui/core/Divider";
 
 const useStyle = makeStyles((theme) => ({
   root: {
+    // TODO: modify background color
     // backgroundColor: "#245736",
     background: "linear-gradient(100deg, #00ffd9 20%, #00c8ff 90%)",
     // background: "linear-gradient(100deg, #007564 20%, #002975 90%)",
