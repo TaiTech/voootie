@@ -32,9 +32,6 @@ const useStyle = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
     width: "90%",
   },
-  bottom: {
-    paddingBottom: theme.spacing(10),
-  },
 }));
 
 const Search = () => {
@@ -102,7 +99,6 @@ const Search = () => {
           />
         </FormControl>
       </Box>
-      <div className={classes.bottom} />
     </Paper>
   );
 };

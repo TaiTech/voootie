@@ -71,9 +71,9 @@ const Questions = () => {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          <Tab label="投票中" {...a11yProps(0)} />
-          <Tab label="投票済" {...a11yProps(1)} />
-          <Tab label="投票終了" {...a11yProps(2)} />
+          <Tab label="受付中" {...a11yProps(0)} />
+          <Tab label="受付終了" {...a11yProps(1)} />
+          <Tab label="投票済" {...a11yProps(2)} />
           <Tab label="全て" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
@@ -103,7 +103,8 @@ const Questions = () => {
           </ListItem>
         </List>
       </TabPanel>
-      <TabPanel value={tab} index={1}>
+      <TabPanel value={tab} index={1}></TabPanel>
+      <TabPanel value={tab} index={2}>
         <List className={classes.root}>
           <ListItem>
             <ListItemAvatar>
@@ -118,7 +119,6 @@ const Questions = () => {
           </ListItem>
         </List>
       </TabPanel>
-      <TabPanel value={tab} index={2}></TabPanel>
       <TabPanel value={tab} index={3}>
         <List className={classes.root}>
           <ListItem>

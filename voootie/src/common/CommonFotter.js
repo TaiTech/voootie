@@ -7,6 +7,7 @@ import { withRouter } from "react-router";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    paddingTop: theme.spacing(10),
   },
   bar: {
     height: theme.spacing(20),
