@@ -13,7 +13,7 @@ const useStyle = makeStyles((theme) => ({
     paddingBottom: theme.spacing(5),
   },
   titleBox: {
-    backgroundColor: "#2e2e2e",
+    backgroundColor: "#1f75ff",
     color: "#ffffff",
   },
   titleText: {
@@ -86,9 +86,12 @@ const Search = () => {
           >
             <MenuItem value={"全てのカテゴリ"}>全てのカテゴリ</MenuItem>
             <MenuItem value={"政治・経済"}>政治・経済</MenuItem>
+            <MenuItem value={"カルチャー"}>カルチャー</MenuItem>
             <MenuItem value={"ファッション"}>ファッション</MenuItem>
-            <MenuItem value={"食品"}>食品</MenuItem>
-            <MenuItem value={"その他"}>その他</MenuItem>
+            <MenuItem value={"エンタメ"}>エンタメ</MenuItem>
+            <MenuItem value={"スポーツ"}>スポーツ</MenuItem>
+            <MenuItem value={"グルメ"}>グルメ</MenuItem>
+            <MenuItem value={"ライフ"}>ライフ</MenuItem>
           </Select>
         </FormControl>
       </Box>

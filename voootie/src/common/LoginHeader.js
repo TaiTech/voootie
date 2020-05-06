@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bar: {
     height: theme.spacing(7),
-    backgroundColor: "#2e2e2e",
+    backgroundColor: "#1f75ff",
   },
   title: {
     flexGrow: 1,
@@ -28,7 +28,7 @@ const LoginHeader = withRouter((props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.bar}>
+      <AppBar position="static" className={classes.bar} elevation={0}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             Voootie

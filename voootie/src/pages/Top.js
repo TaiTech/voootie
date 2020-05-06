@@ -15,10 +15,16 @@ const useStyle = makeStyles((theme) => ({
   root: {
     // TODO: modify background color
     // backgroundColor: "#245736",
-    background: "linear-gradient(100deg, #00ffd9 20%, #00c8ff 90%)",
+    // background: "linear-gradient(100deg, #00ffd9 20%, #00c8ff 90%)",
     // background: "linear-gradient(100deg, #007564 20%, #002975 90%)",
+    backgroundColor: "#e3e3e3",
+  },
+  catch: {
+    background: "linear-gradient(to bottom, #1f75ff, #00ffd9)",
   },
   copyBox: {
+    // background: "linear-gradient(to bottom, #00ffd9, #00c8ff)",
+    // backgroundColor: "#1f75ff",
     textAlign: "center",
     paddingTop: theme.spacing(2),
   },
@@ -29,13 +35,17 @@ const useStyle = makeStyles((theme) => ({
     paddingBottom: theme.spacing(5),
   },
   images: {
+    // background: "linear-gradient(#00ffd9, #00c8ff)",
+    // backgroundColor: "#1f75ff",
     textAlign: "center",
     paddingBottom: theme.spacing(8),
   },
   arrow: {
     padding: "0 100px",
   },
-  descriptionContainer: {},
+  descriptionContainer: {
+    paddingTop: theme.spacing(5),
+  },
   descriptionPaper: {
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -48,30 +58,32 @@ const Top = () => {
   return (
     <div className={classes.root}>
       <LoginHeader />
-      <Box className={classes.copyBox}>
-        <Typography variant="h1" className={classes.copy}>
-          あなたの一票が
-          <br />
-          社会を変える
-        </Typography>
-      </Box>
-      <Box className={classes.images}>
-        <img
-          src={org}
-          width="120"
-          height="120"
-          alt="organization"
-          fill="#24664b"
-        />
-        <img
-          src={arrow}
-          width="120"
-          height="120"
-          alt="arrow"
-          className={classes.arrow}
-        />
-        <img src={people} width="120" height="120" alt="people" />
-      </Box>
+      <div className={classes.catch}>
+        <Box className={classes.copyBox}>
+          <Typography variant="h1" className={classes.copy}>
+            あなたの一票が
+            <br />
+            社会を変える
+          </Typography>
+        </Box>
+        <Box className={classes.images}>
+          <img
+            src={org}
+            width="120"
+            height="120"
+            alt="organization"
+            fill="#24664b"
+          />
+          <img
+            src={arrow}
+            width="120"
+            height="120"
+            alt="arrow"
+            className={classes.arrow}
+          />
+          <img src={people} width="120" height="120" alt="people" />
+        </Box>
+      </div>
       <Grid container spacing={1} className={classes.descriptionContainer}>
         <Grid item xs={1} />
         <Grid item xs={4}>

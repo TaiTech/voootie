@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bar: {
     height: theme.spacing(7),
-    backgroundColor: "#2e2e2e",
+    backgroundColor: "#1f75ff",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -131,7 +131,7 @@ const CommonHeader = withRouter((props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.bar}>
+      <AppBar position="static" className={classes.bar} elevation={0}>
         <Toolbar>
           <IconButton
             edge="start"

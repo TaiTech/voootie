@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { withRouter } from "react-router";
 import { makeStyles, AppBar } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
@@ -52,11 +53,18 @@ function a11yProps(index) {
   };
 }
 
-const Questions = () => {
+function ListItemLink(props) {
+  return <ListItem button component="a" {...props} />;
+}
+
+const Questions = withRouter((props) => {
   const classes = useStyle();
   const [tab, setTab] = React.useState(0);
   const handleChangeTab = (event, newValue) => {
     setTab(newValue);
+  };
+  const handleMovePage = (page) => () => {
+    props.history.push("/" + page);
   };
 
   return (
@@ -71,15 +79,15 @@ const Questions = () => {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          <Tab label="受付中" {...a11yProps(0)} />
-          <Tab label="受付終了" {...a11yProps(1)} />
+          <Tab label="集計中" {...a11yProps(0)} />
+          <Tab label="集計終了" {...a11yProps(1)} />
           <Tab label="投票済" {...a11yProps(2)} />
           <Tab label="全て" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={tab} index={0}>
         <List className={classes.root}>
-          <ListItem>
+          <ListItemLink>
             <ListItemAvatar>
               <Avatar>
                 <WorkIcon />
@@ -87,10 +95,11 @@ const Questions = () => {
             </ListItemAvatar>
             <ListItemText
               primary="新型コロナの家計への影響調査"
-              secondary="2020/04/07 - 2020/05/06"
+              secondary="残り100サンプル"
+              onClick={handleMovePage("Vote/voteid")}
             />
-          </ListItem>
-          <ListItem>
+          </ListItemLink>
+          <ListItemLink>
             <ListItemAvatar>
               <Avatar>
                 <WorkIcon />
@@ -98,44 +107,20 @@ const Questions = () => {
             </ListItemAvatar>
             <ListItemText
               primary="ハンバーガー復活！"
-              secondary="2020/04/10 - 2020/05/10"
+              secondary="残り512サンプル"
             />
-          </ListItem>
+          </ListItemLink>
         </List>
       </TabPanel>
       <TabPanel value={tab} index={1}></TabPanel>
       <TabPanel value={tab} index={2}>
-        <List className={classes.root}>
-          <ListItem>
-            <ListItemAvatar>
-              <Avatar>
-                <WorkIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary="新型コロナの家計への影響調査"
-              secondary="2020/04/07 - 2020/05/06"
-            />
-          </ListItem>
-        </List>
+        <List className={classes.root}></List>
       </TabPanel>
       <TabPanel value={tab} index={3}>
-        <List className={classes.root}>
-          <ListItem>
-            <ListItemAvatar>
-              <Avatar>
-                <WorkIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary="新型コロナの家計への影響調査"
-              secondary="2020/04/07 - 2020/05/06"
-            />
-          </ListItem>
-        </List>
+        <List className={classes.root}></List>
       </TabPanel>
     </Paper>
   );
-};
+});
 
 export default Questions;
