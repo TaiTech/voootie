@@ -1,2 +1,2 @@
 # voootie
-Voootie
+この開発は中止しました。
